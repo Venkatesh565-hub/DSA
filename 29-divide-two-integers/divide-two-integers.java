@@ -1,12 +1,10 @@
 class Solution {
     public int divide(int dividend, int divisor) {
 
-        // Handle overflow
         if (dividend == Integer.MIN_VALUE && divisor == -1) {
             return Integer.MAX_VALUE;
         }
 
-        // Determine sign
         boolean negative = (dividend < 0) ^ (divisor < 0);
 
         long a = Math.abs((long) dividend);
